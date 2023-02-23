@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+     <h2><span style="color: blue;"><strong>INFORMATION ABOUT THE GAME, PART 3</strong></span></h2>
+    <p>&nbsp;</p>
+{% endblock %}
+{% block content %}
+
+    <p><span style="text-decoration: underline; color: blue;"><strong>PLEASE REMEMBER:</strong></span></p>
+<p><strong><span style="color: blue;">Tax payment</span> =</strong><strong> 0.25 x ( declared corporate income)</strong></p>
+<p><span style="color: blue;"><strong>Unpaid Tax </strong></span><strong>= 0.25 &times; ( 800 &minus; declared corporate income)</strong></p>
+<p><span style="color: blue;"><strong>Fine</strong></span><strong> = the additional fee to be paid = Unpaid Tax</strong></p>
+<p><span style="color: coral;"><strong>The after-tax profit in the case of an audit as follows:</strong></span></p>
+<p><strong><span style="color: #0000ff;">The after-tax profit</span> =&nbsp;800 &minus; tax &minus; unpaid tax &minus; fine</strong></p>
+<p><span style="color: coral;"><strong>The after-tax profit in the case of no audit as follows:</strong></span></p>
+<p><strong><span style="color: #0000ff;">The after-tax profit</span>&nbsp;= 800 &minus; tax</strong></p>
+<p><strong><span style="color: blue;">Personal payout</span> </strong><span style="font-weight: 400;">=</span><strong> reward + (0.20 x (after-tax profit of the company))</strong></p>
+    {% next_button %}
+{% endblock %}

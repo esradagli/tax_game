@@ -1,0 +1,57 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+   <pre><span style="color: blue;"><strong>CHAT</strong></span></pre>
+    <p><span style="font-weight:bold; font-size: medium; ">PLEASE NOTE: Your identity and that of the other participants will always remain anonymous.</span></p>
+
+{% chat %}
+    <style>
+    .otree-chat__input{
+        flex: auto;
+        background: white;
+        overflow: auto;
+        height: 60px;
+        width: 800px;
+        font-size: large;
+
+    }
+    .otree-chat__nickname {
+        font-weight: bold;
+        color: darkblue;
+        height: auto;
+        font-size: large;
+        line-height: 30px
+
+    }
+    .otree-chat__messages{
+        color: black;
+        font-size: large;
+        height: 200px;
+        background: floralwhite;
+    }
+    .otree-chat__btn-send{
+        color: darkgreen;
+        height: auto;
+        width: 100px;
+        font-size: large;
+        font-weight: bold;
+    }
+
+</style>
+
+
+{% endblock %}
+{% block content %}
+    <br><span style="font-size: medium; color: orangered"> Please chat with your groupmates. <br>Don't forget your payoff depends on your and your groupmates' decisions. </span>
+    {% formfields %}
+    {% next_button %}
+
+    <script>
+    setTimeout(
+    function () {
+        alert("Time has run out. Please make your decision.");
+    },
+    60*5000 // 60 seconds
+);
+    </script>
+{% endblock %}

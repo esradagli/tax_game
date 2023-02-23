@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+    <pre><span style="color: blue;">PLEASE ANSWER THE FOLLOWING QUESTIONS</span></pre>
+
+{% endblock %}
+ {% block content %}
+     Please enter your Prolific ID first
+     {% formfield player.prolific_id %}
+
+     Question 1.
+     <br>{% formfield player.risk %}
+     Question 2. How old are you (in years)?
+     {% formfield player.age %}
+     Question 3. What is your gender?
+     {% formfield player.gender %}
+     Question 4. What is/was your field of study?
+     {% formfield player.major %}
+     Question 5. Which is the highest level of education you completed?
+     {% formfield player.education %}
+
+
+     {% next_button %}
+
+ {% endblock %}

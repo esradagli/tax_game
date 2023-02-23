@@ -1,0 +1,54 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+   Chat
+{% chat nickname=nickname %}
+    <style>
+    .otree-chat__input{
+        flex: auto;
+        background: white;
+        overflow: auto;
+        height: 60px;
+        width: 800px;
+        font-size: large;
+
+
+    }
+    .otree-chat__nickname {
+        color: darkblue;
+        font-weight: bold;
+        height: auto;
+        font-size: large;
+        line-height: 30px
+    }
+    .otree-chat__messages{
+        color: black;
+        font-size: large;
+        height: 200px;
+        background-color: floralwhite;
+        width: 930px
+    }
+    .otree-chat__btn-send{
+        color: darkgreen;
+        height: auto;
+        width: 100px;
+        font-size: large;
+        font-weight: bold
+    }
+
+   </style>
+
+{% endblock %}
+{% block content %}
+    <br><span style="font-size: normal; color: orangered"> You are with 2 other randomly selected participants on this page. Please chat with your groupmates. <br>Don't forget your payoff depends on your and your groupmates' decisions. </span>
+    <script>
+    setTimeout(
+    function () {
+        alert("Time has run out. Please make your decision.");
+    },
+    60*5000 // 60 seconds
+);
+    </script>
+    {% formfields %}
+    {% next_button %}
+{% endblock %}

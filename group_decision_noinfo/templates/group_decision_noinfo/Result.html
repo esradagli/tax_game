@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+   <pre><span style="color: #ff0000;"><strong>RESULTS</strong></span></pre>
+{% endblock %}
+{% block content %}
+    {% if group.audited %}
+        {% if Constants.company_income != group.total_income_entered %}
+            <br>Your group experienced an audit.
+            <br>In your group, the median reported income of the company was {{ group.total_income_entered }} pence, and it is not the same as actual company income.
+            <br>Therefore, your group needed to pay fine and tax repayment.
+            <br>The payoff you earned form this experimental study is {{ player.payoff }} ( reward included).
+            <br>This is the final page of this experimental study. Thank you for participating.
+        {% else %}
+            The median reported income of the company was {{ group.total_income_entered }}.
+            <br>The payoff you earned from this game is {{ player.payoff }} ( reward included).
+            <br>This is the final page of this experimental study. Thank you for participating.
+          {% endif %}
+
+    {% else %}
+        The median reported income of the company was {{ group.total_income_entered }}.
+        <br>The payoff you earned from this game is {{ player.payoff }} (reward included).
+        <br>This is the final page of this experimental study. Thank you for participating.
+
+
+    {% endif %}
+<br>
+<br>
+<br>
+    <button class="btn btn-primary" type="button" onclick="document.location='https://app.prolific.co/submissions/complete?cc=8AC9883E'" style="background-color:#008000">Complete study</button>
+{% endblock %}

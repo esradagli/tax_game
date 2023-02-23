@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+    <h2><span style="color: blue;"><strong>INFORMATION ABOUT THE GAME, PART 1</strong></span></h2>
+    <p>&nbsp;</p>
+{% endblock %}
+{% block content %}
+    <p><span style="font-weight: 400;">Together with 2 other randomly selected participants, you form a triad that stays together during the experiment.</span> <span style="font-weight: 400;">You and two other participants file a <span style="color: blue;">joint tax report for a (fictitious) company</span>. Additional to your reward, you will receive <span style="color: blue;">a bonus conditional on the company's after-tax profit</span>.&nbsp;</span></p>
+<p><span style="font-weight: 400;">Our fictitious company had <span style="color: blue;">800 pence</span> as actual corporate income in the last fiscal period. The task is to decide how many pence will be reported as the income of the company to the fiscal authority. While doing so, consider that <span style="color: blue;">25 percent</span> of the reported income will go to the tax payment. Since you belong to a triad, you will have the opportunity to communicate about the proposal with the other members in a chat box for a maximum of <span style="color: blue;">5 minutes. </span></span></p>
+<p><span style="font-weight: 400;"><span style="color: blue;">Note:</span> While reading the information pages, you are asked to answer some questions about the game. Answering these questions is only a check of your understanding and is not payout relevant.</span></p>
+     Question 1
+    <br>{% formfield player.q1 %}
+    <br>Question 2
+    <br>{% formfield player.q2 %}
+    {% next_button %}
+{% endblock %}

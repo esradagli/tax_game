@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+    <h2><span style="color: blue;"><strong>INFORMATION ABOUT THE GAME, PART 2</strong></span></h2>
+    <p>&nbsp;</p>
+{% endblock %}
+{% block content %}
+    <p><span style="font-weight: 400;">While using the chat, please keep in mind that the declared corporate income can therefore <span style="color: blue;">be equal to or less than the actual corporate income (800 pence)</span>, but not higher.&nbsp;</span></p>
+<p><span style="font-weight: 400;">If you and the other members of your group do not report the same amount, the<span style="color: blue;"> median of the three proposals</span> will determine the amount of the declared corporate income of your group.&nbsp;</span></p>
+<p><span style="font-weight: 400;">In this game, your bonus depends on the after-tax profit of the fictitious company. Therefore, <span style="color: blue;">your additional payoff will be 20%</span> of the company's after-tax profit.</span></p>
+<p><span style="font-weight: 400;">However, <span style="color: blue;">with a probability of 30%</span>, the provided information on the corporate income will be audited. If there is an audit and your declared corporate income does not coincide with the actual corporate income, the company has to repay the unpaid tax as well as an additional fine which is equal to the amount of the unpaid tax. Together, they will affect the company's after-tax profit, therefore your payoff.</span></p>
+    Question 3
+    <br>{% formfield player.q3 %}
+    <br>Question 4
+    <br>{% formfield player.q4 %}
+    {% next_button %}
+{% endblock %}

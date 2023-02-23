@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+ <pre><span style="color: blue;"><strong>General Information</strong></span></pre>
+{% endblock %}
+{% block content %}
+<p><span style="font-weight: 400;">This is an academic experiment on decision-making which will take approximately <span style="color: blue;">12 minutes</span>.</span></p>
+<p><span style="font-weight: 400;">The study has two parts. Part one is a <span style="color: blue;">survey</span>, part two is an <span style="color: blue;">interactive task</span>. You will receive instructions on the task before it starts.</span></p>
+<p><span style="font-weight: 400;">For your successful participation, you will receive a <span style="color: blue;">reward</span> of <span style="color: blue;">GBP 1.50</span>.</span></p>
+<p><span style="font-weight: 400;">In addition to your reward, you will receive a <span style="color: blue;">bonus</span> which depends on <span style="color: blue;">your decisions and the decisions of other participants</span> in part two.</span></p>
+<p><span style="color: blue;"><strong>PERSONAL CONSENT</strong></span></p>
+
+    {% formfields %}
+
+<p>{% next_button %}</p>
+{% endblock %}
+
